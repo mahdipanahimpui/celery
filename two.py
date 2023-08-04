@@ -12,6 +12,7 @@ logger = get_task_logger(__name__)
 @app.task(bind=True, name='two.add', default_retry_delay=600)
 def add(self, a, b):
     # print(self.request) # to access the task
+    time.sleep(100)
     try:
         return a / b
     except ZeroDivisionError:

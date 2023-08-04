@@ -1,0 +1,25 @@
+
+flower: a tool to monitor
+celery --broker=ampq://guest:guest@localhost:5672 flower
+
+
+celery commands:
+
+celery shell: a python shell that celery is available on it
+
+celery status: status of celery nodes
+
+celery -A proj status: status of a specific project
+
+celery -A proj purge: delete all tasks in proj project
+
+celery purge: delete all tasks in all nodes
+
+
+celery inspect active/reserved/revoked/schedule: status of active/reserved/revoked celery plus its tasks
+<schedule> for eta
+<revoked> for failed
+celery -A proj inspect ....
+
+
+celery <-A proj>(optional) inspect stats: worker status 
