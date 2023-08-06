@@ -23,3 +23,7 @@ celery -A proj inspect ....
 
 
 celery <-A proj>(optional) inspect stats: worker status 
+
+
+how run celery in teminal:
+celery -A file_name worker -l info
