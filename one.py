@@ -1,7 +1,7 @@
 from celery import Celery
 import time
 
-app = Celery('one', broker="amqp://root:000@localhost:5672")
+app = Celery('one', broker="amqp://guest:guest@localhost:5672")
 
 # use this command to start
 # celery -A one worker -l info
